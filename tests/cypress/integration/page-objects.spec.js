@@ -54,5 +54,5 @@ describe("Testsuite", () => {
         billNewPage.createBill("1000", "Bills")
         billsPage.deleteLastBill()
         indexPage.logoutUser("Login")
-});
+    });
 });

@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-29T09:46:04.433Z",
+    "end": "2021-04-29T09:46:22.632Z",
+    "duration": 18199,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "937dcec3-709a-4210-b84e-302ae2a2ebf5",
+      "title": "",
+      "fullFile": "cypress/integration/percy.spec.js",
+      "file": "cypress/integration/percy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and logout",
+              "fullTitle": "Testsuite Login and logout",
+              "timedOut": null,
+              "duration": 3518,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.logoutUser(\"Login\");\ncy.percySnapshot('test1');",
+              "err": {},
+              "uuid": "14aeddf4-e4d1-4e2f-b370-76310490631f",
+              "parentUUID": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create client and verify",
+              "fullTitle": "Testsuite Create client and verify",
+              "timedOut": null,
+              "duration": 4206,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\nclientsPage.viewClientNew(\"New Client\");\ncy.percySnapshot('ncpg');\nclientNewPage.createClient(\"tester\", \"tester@mail.com\", \"12345678\", \"Clients\");\nclientsPage.verifyLastClient(\"tester\", \"tester@mail.com\", \"12345678\");\nclientsPage.deleteLastClient();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "d43be107-1dca-4083-b06e-2a6addabb3b3",
+              "parentUUID": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create bill and verify",
+              "fullTitle": "Testsuite Create bill and verify",
+              "timedOut": null,
+              "duration": 3598,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillsPage.viewBillNew(\"New Bill\");\ncy.wait(500);\nbillNewPage.createBill(\"1000\", \"Bills\");\nbillsPage.verifyLastBill(\"2\", \"1000\", \"No\", \"Bills\");\nbillsPage.deleteLastBill();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "ce7afdd2-40a2-46a4-9059-9608617d5cbb",
+              "parentUUID": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create room and verify",
+              "fullTitle": "Testsuite Create room and verify",
+              "timedOut": null,
+              "duration": 3718,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\nroomsPage.viewRoomNew(\"New Room\");\nroomNewPage.createRoom(\"3\", \"3\", \"3\", \"1200\", \"Rooms\");\nroomsPage.verifyLastRoom(\"3\", \"3\", \"3\", \"1200\", \"true\", \"balcony\");\nroomsPage.deleteLastRoom();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "f29a8fc6-ab44-4a0f-b756-9ded9a7fa642",
+              "parentUUID": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete a bill",
+              "fullTitle": "Testsuite Delete a bill",
+              "timedOut": null,
+              "duration": 3030,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillsPage.viewBillNew(\"New Bill\");\nbillNewPage.createBill(\"1000\", \"Bills\");\nbillsPage.deleteLastBill();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "0e74b304-6d4d-4d8f-b241-68295323308c",
+              "parentUUID": "179aad74-f7dc-4b71-88ad-50a8ee8e0f8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "14aeddf4-e4d1-4e2f-b370-76310490631f",
+            "d43be107-1dca-4083-b06e-2a6addabb3b3",
+            "ce7afdd2-40a2-46a4-9059-9608617d5cbb",
+            "f29a8fc6-ab44-4a0f-b756-9ded9a7fa642",
+            "0e74b304-6d4d-4d8f-b241-68295323308c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

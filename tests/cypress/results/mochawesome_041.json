@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-27T13:17:10.675Z",
+    "end": "2021-04-27T13:17:33.312Z",
+    "duration": 22637,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb818424-f4fe-4c6c-a0ae-5d7a836f1595",
+      "title": "",
+      "fullFile": "cypress/integration/percy.spec.js",
+      "file": "cypress/integration/percy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e141a113-5603-4d65-8c89-2914c2efa342",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and logout",
+              "fullTitle": "Testsuite Login and logout",
+              "timedOut": null,
+              "duration": 3015,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "45005d19-5b22-483e-b91a-b06b843a86eb",
+              "parentUUID": "e141a113-5603-4d65-8c89-2914c2efa342",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create client and verify",
+              "fullTitle": "Testsuite Create client and verify",
+              "timedOut": null,
+              "duration": 4836,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\nclientsPage.viewClientNew(\"New Client\");\ncy.percySnapshot('ncpg');\nclientNewPage.createClient(\"tester\", \"tester@mail.com\", \"12345678\", \"Clients\");\nclientsPage.verifyLastClient(\"tester\", \"tester@mail.com\", \"12345678\");\nclientsPage.deleteLastClient();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "13a8ebab-7fce-4e41-83f2-aefe336f447d",
+              "parentUUID": "e141a113-5603-4d65-8c89-2914c2efa342",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create bill and verify",
+              "fullTitle": "Testsuite Create bill and verify",
+              "timedOut": null,
+              "duration": 7545,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillsPage.viewBillNew(\"New Bill\");\nbillNewPage.createBill(\"1000\", \"Bills\");\nbillsPage.verifyLastBill(\"2\", \"1000\", \"No\", \"Bills\");\nbillsPage.deleteLastBill();\nindexPage.logoutUser(\"Login\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.card.bill>' to contain '2'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.card.bill>' to contain '2'\n    at Object.verifyLastBill (http://localhost:3000/__cypress/tests?p=cypress/integration/percy.spec.js:313:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/percy.spec.js:238:15)",
+                "diff": null
+              },
+              "uuid": "3793651c-9bac-4b26-a994-50e5e2f98aff",
+              "parentUUID": "e141a113-5603-4d65-8c89-2914c2efa342",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create room and verify",
+              "fullTitle": "Testsuite Create room and verify",
+              "timedOut": null,
+              "duration": 4247,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\nroomsPage.viewRoomNew(\"New Room\");\nroomNewPage.createRoom(\"3\", \"3\", \"3\", \"1200\", \"Rooms\");\nroomsPage.verifyLastRoom(\"3\", \"3\", \"3\", \"1200\", \"true\", \"balcony\");\nroomsPage.deleteLastRoom();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "2fa16dee-4256-41d6-a3af-da82949ec322",
+              "parentUUID": "e141a113-5603-4d65-8c89-2914c2efa342",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete a bill",
+              "fullTitle": "Testsuite Delete a bill",
+              "timedOut": null,
+              "duration": 2874,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillsPage.deleteLastBill();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "384205d6-39fb-4fe0-8356-ce98d9ce2a51",
+              "parentUUID": "e141a113-5603-4d65-8c89-2914c2efa342",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45005d19-5b22-483e-b91a-b06b843a86eb",
+            "13a8ebab-7fce-4e41-83f2-aefe336f447d",
+            "2fa16dee-4256-41d6-a3af-da82949ec322",
+            "384205d6-39fb-4fe0-8356-ce98d9ce2a51"
+          ],
+          "failures": [
+            "3793651c-9bac-4b26-a994-50e5e2f98aff"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 22517,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

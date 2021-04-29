@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-27T13:19:52.492Z",
+    "end": "2021-04-27T13:19:57.640Z",
+    "duration": 5148,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2078dfa5-64a2-4327-937a-965b948bbfa9",
+      "title": "",
+      "fullFile": "cypress/integration/skapaenklient.js",
+      "file": "cypress/integration/skapaenklient.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2ed71dd-fa15-4fb2-9482-13c51c1b380e",
+          "title": "skapaenkllient ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "(Skapaenklient)",
+              "fullTitle": "skapaenkllient  (Skapaenklient)",
+              "timedOut": null,
+              "duration": 4948,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click();\ncy.wait(500); //försäkra att jag är på rätt sida?\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\");\ncy.percySnapshot('dashboardpg'); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //klilcka på skapa en klient\ncy.get('.blocks > :nth-child(2) > .btn').click(); //försäkra att du är på Clients sida\ncy.get('h2').should(\"contain\", \"Clients\"); //Klicka på knappen skapa en klient\ncy.get('h2 > .btn').click(); //Försäkra att du är på rätt sida\ncy.get(\"h2\").should(\"contain\", \"New Client\");\ncy.percySnapshot('Newclientpg'); //Skriv in namn på klienten\ncy.get(':nth-child(1) > input').type(\"Tester\");\ncy.get(':nth-child(2) > input').type(\"Tester@test.se\");\ncy.get(':nth-child(3) > input').type(\"0745698122\"); //Klicka på spara\ncy.get('.blue').click();\ncy.get(\"h2\").should(\"contain\", \"Clients\");\ncy.contains(\"Tester\"); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {},
+              "uuid": "d5a63fbc-ef0c-4b54-a6b7-26f45182cadc",
+              "parentUUID": "d2ed71dd-fa15-4fb2-9482-13c51c1b380e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5a63fbc-ef0c-4b54-a6b7-26f45182cadc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4948,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

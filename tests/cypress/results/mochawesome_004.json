@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-22T14:36:47.265Z",
+    "end": "2021-04-22T14:36:51.114Z",
+    "duration": 3849,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b43ab9b-cfbd-4212-959f-d8d4583cf046",
+      "title": "",
+      "fullFile": "cypress/integration/skapaenräkning.js",
+      "file": "cypress/integration/skapaenräkning.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b641e55a-0c61-422b-8fa9-323bda5131b3",
+          "title": "Create a bill ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "(Skapaenräkning)",
+              "fullTitle": "Create a bill  (Skapaenräkning)",
+              "timedOut": null,
+              "duration": 3792,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click();\ncy.wait(500); //försäkra att jag är på rätt sida?\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //Klicka in på Bills\ncy.get(':nth-child(3) > .btn').click();\ncy.get('h2').should(\"contain\", \"Bills\"); //klicka på knapp\ncy.get('h2 > .btn').click();\ncy.get(\"h2\").should(\"contain\", \"New Bill\"); //skriv in 1000\ncy.get('input').type(\"1000\"); //fyll i checkbox\ncy.get('.checkbox').click(); //klicka på Save knappen\ncy.get('.blue').click(); //försäkra om rätt sida\ncy.get(\"h2\").should(\"contain\", \"Bills\"); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {},
+              "uuid": "a7f297ec-9985-447a-823e-57fe2296d7ad",
+              "parentUUID": "b641e55a-0c61-422b-8fa9-323bda5131b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7f297ec-9985-447a-823e-57fe2296d7ad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3792,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

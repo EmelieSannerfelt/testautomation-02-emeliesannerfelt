@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-27T13:19:38.856Z",
+    "end": "2021-04-27T13:19:47.191Z",
+    "duration": 8335,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d4617cd9-308d-48b5-9f44-893f63606ab5",
+      "title": "",
+      "fullFile": "cypress/integration/raderaenräkning.js",
+      "file": "cypress/integration/raderaenräkning.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ebcfc29-4fe9-472f-b665-ee74128a96e5",
+          "title": "delete a bill ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "(Raderaenräkning)",
+              "fullTitle": "delete a bill  (Raderaenräkning)",
+              "timedOut": null,
+              "duration": 8138,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click();\ncy.wait(500); //försäkra att jag är på rätt sida?\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //klicka på View under Bills\ncy.get(':nth-child(3) > .btn').click(); //Klicka på tre prickar\ncy.get(':nth-child(3) > .action > img').click(); //klicka på radera räkning\ncy.get('.menu > :nth-child(2)').click(); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(3) > .action > img`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(3) > .action > img`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/raderaenräkning.js:119:8)",
+                "diff": null
+              },
+              "uuid": "64a1926a-b89e-42cd-9a0b-b9260d52740e",
+              "parentUUID": "4ebcfc29-4fe9-472f-b665-ee74128a96e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "64a1926a-b89e-42cd-9a0b-b9260d52740e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8138,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

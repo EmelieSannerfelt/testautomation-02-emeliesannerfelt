@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-22T14:36:55.418Z",
+    "end": "2021-04-22T14:37:13.141Z",
+    "duration": 17723,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b5737fe-7eec-4f90-948d-18a9ea73792d",
+      "title": "",
+      "fullFile": "cypress/integration/Tester.js",
+      "file": "cypress/integration/Tester.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+          "title": "Log in user ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "(Loggain)",
+              "fullTitle": "Log in user  (Loggain)",
+              "timedOut": null,
+              "duration": 2391,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click(); //försäkra att jag är inloggad\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //logga ut\ncy.get(\".user > .btn\").click(); //verifiera att jag är på rätt sida, utloggad\ncy.get(\"h2\").should(\"contain\", \"Login\");",
+              "err": {},
+              "uuid": "8c755691-e753-4d34-8ebe-907a0f38eb5e",
+              "parentUUID": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "(Loggaut)",
+              "fullTitle": "Log in user  (Loggaut)",
+              "timedOut": null,
+              "duration": 2125,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på logga in knapp\ncy.get('.btn').click(); //försäkra att jag är på rätt sida, inloggad\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //logga ut\ncy.get(\".user > .btn\").click(); //verifiera att jag är utloggad\ncy.get(\"h2\").should(\"contain\", \"Login\");",
+              "err": {},
+              "uuid": "69550e80-4be7-4e35-ae4e-634824d7ff06",
+              "parentUUID": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "(Skapaenräkning)",
+              "fullTitle": "Log in user  (Skapaenräkning)",
+              "timedOut": null,
+              "duration": 2693,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på logga in knapp\ncy.get('.btn').click(); //försäkra att jag är på rätt sida, inloggad\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //Klicka in på Bills\ncy.get(':nth-child(3) > .btn').click(); //Kolla att jag är på rätt sida - Bills\ncy.get('h2').should(\"contain\", \"Bills\"); //klicka på knapp Create Bill\ncy.get('h2 > .btn').click();\ncy.get(\"h2\").should(\"contain\", \"New Bill\"); //skriv in 1000 som räkning\ncy.get('input').type(\"1000\"); //fyll i checkbox\ncy.get('.checkbox').click(); //klicka på Save knappen\ncy.get('.blue').click(); //försäkra om rätt sida\ncy.get(\"h2\").should(\"contain\", \"Bills\"); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {},
+              "uuid": "ba22da97-bdb6-40db-988c-06234e6e501b",
+              "parentUUID": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "(Raderaenräkning)",
+              "fullTitle": "Log in user  (Raderaenräkning)",
+              "timedOut": null,
+              "duration": 6548,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click(); //försäkra att jag är på rätt sida, inloggad\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsidan\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //klicka på View under Bills\ncy.get(':nth-child(3) > .btn').click(); //Klicka på tre prickar\ncy.get(':nth-child(3) > .action > img').click(); //klicka på radera (en räkning)\ncy.get('.menu > :nth-child(2)').click(); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(3) > .action > img`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(3) > .action > img`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/Tester.js:188:8)",
+                "diff": null
+              },
+              "uuid": "5f6ed7a2-ce78-420e-b644-f2d4788b672c",
+              "parentUUID": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "(Skapaenklient)",
+              "fullTitle": "Log in user  (Skapaenklient)",
+              "timedOut": null,
+              "duration": 3661,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\"); //Verifiera titeln\ncy.get('h2').should(\"contain\", \"Login\"); //Skriv in i formulär - inloggninsupg\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c'); //Klicka på log in knapp\ncy.get('.btn').click(); //försäkra att jag är på rätt sida?\ncy.get(\".username\").should(\"contain\", \"Welcome tester01!\"); //kolla att jag är på starsida\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\"); //klilcka på skapa en klient\ncy.get('.blocks > :nth-child(2) > .btn').click(); //försäkra att du är på Clients sida\ncy.get('h2').should(\"contain\", \"Clients\"); //Klicka på knappen skapa en klient\ncy.get('h2 > .btn').click(); //Försäkra att du är på rätt sida\ncy.get(\"h2\").should(\"contain\", \"New Client\"); //Skriv in namn på klienten\ncy.get(':nth-child(1) > input').type(\"Tester\");\ncy.get(':nth-child(2) > input').type(\"Tester@test.se\");\ncy.get(':nth-child(3) > input').type(\"0745698122\"); //Klicka på spara\ncy.get('.blue').click();\ncy.get(\"h2\").should(\"contain\", \"Clients\");\ncy.contains(\"Tester\"); //logga ut\ncy.get('.user > .btn').click();",
+              "err": {},
+              "uuid": "e004bee5-2f39-464e-966f-01db093d2bc7",
+              "parentUUID": "2aa86922-0cbc-4af5-b70d-6116a5ffa56a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c755691-e753-4d34-8ebe-907a0f38eb5e",
+            "69550e80-4be7-4e35-ae4e-634824d7ff06",
+            "ba22da97-bdb6-40db-988c-06234e6e501b",
+            "e004bee5-2f39-464e-966f-01db093d2bc7"
+          ],
+          "failures": [
+            "5f6ed7a2-ce78-420e-b644-f2d4788b672c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17418,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
